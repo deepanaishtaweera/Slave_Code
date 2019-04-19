@@ -8,13 +8,7 @@ void setup() {
 }
 
 void loop() {
-    TakeWaterIn();
-    delay(25000);
-    StopMotor();
-    delay(2000);
-    TakeWaterOut();
-    delay(25000);
-    StopMotor();
+    WaterPumpTask();
     while (1) {
     }
 }

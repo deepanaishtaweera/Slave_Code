@@ -19,3 +19,13 @@ void StopMotor(){
     digitalWrite(MOTOR_1A, LOW);
     digitalWrite(MOTOR_1B, LOW);
 }
+
+void WaterPumpTask(){
+    TakeWaterIn();
+    delay(35000);
+    StopMotor();
+    delay(2000);
+    TakeWaterOut();
+    delay(35000);
+    StopMotor();
+}
