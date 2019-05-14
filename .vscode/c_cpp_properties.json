@@ -3,22 +3,13 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\Users\\ASUS\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
-                "C:\\Users\\ASUS\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.6.20\\**",
-                "C:\\Program Files (x86)\\Arduino\\lib\\**",
-                "C:\\Users\\ASUS\\Documents\\Arduino\\libraries\\**",
-                "${workspaceFolder}/**"
+                "C:\\\\Program Files (x86)\\\\Arduino\\\\tools\\\\**",
+                "C:\\\\Program Files (x86)\\\\Arduino\\\\hardware\\\\arduino\\\\avr\\\\**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "cStandard": "c11",
-            "intelliSenseMode": "msvc-x64",
             "forcedInclude": [
-                "C:\\Users\\ASUS\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.6.20\\cores\\arduino\\Arduino.h"
-            ]
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
+            ],
+            "intelliSenseMode": "msvc-x64"
         }
     ],
     "version": 4
