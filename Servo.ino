@@ -21,6 +21,11 @@ void TurnCoinArm(){
     TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 40);
     TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_ARM_INIT_ANGLE, 40);
 }
+void TurnMagnet(){
+    magnetServo.write(40);
+    delay(4000);
+    magnetServo.write(95);
+}
 
 void CloseCoinDoor(){
     doorServo.write(DOOR_CLOSED_ANGLE);
@@ -33,12 +38,12 @@ void OpenCoinDoor(){
 void InitializeServo() {
     waterArmServo.attach(WATER_SERVO_ARM);
     coinArmServo.attach(COIN_SERVO_ARM);
-    //magnetServo.attach(MAGNET_SERVO);
+    magnetServo.attach(MAGNET_SERVO);
     doorServo.attach(DOOR_SERVO);
 
     waterArmServo.write(WATER_ARM_INIT_ANGLE);
     coinArmServo.write(COIN_ARM_INIT_ANGLE);
-    //magnetServo.write(50);
+    magnetServo.write(MAGNET_INIT_ANGLE);
     doorServo.write(DOOR_CLOSED_ANGLE);
 }
 

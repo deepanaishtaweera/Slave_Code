@@ -26,6 +26,6 @@ void WaterPumpTask(){
     StopMotor();
     delay(2000);
     TakeWaterOut();
-    delay(35000);
+    delay(35000);  //35000 is the real delay
     StopMotor();
 }

@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-    WaterPumpTask();
+    TurnMagnet();
     while (1) {
     }
 }
