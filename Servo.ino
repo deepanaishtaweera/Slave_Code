@@ -23,7 +23,7 @@ void TurnCoinArm(){
 }
 void TurnMagnet(){
     magnetServo.write(40);
-    delay(4000);
+    delay(2000);
     magnetServo.write(95);
 }
 
