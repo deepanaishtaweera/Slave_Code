@@ -1,8 +1,0 @@
-{
-    "programmer": "AVRISP mkII",
-    "board": "arduino:avr:nano",
-    "sketch": "Slave.ino",
-    "port": "COM12",
-    "output": "ArduinoOutput",
-    "configuration": "cpu=atmega328"
-}
