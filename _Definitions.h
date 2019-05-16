@@ -11,8 +11,8 @@
 #define DOOR_SERVO 8
 #define MOTOR_1A 3
 #define MOTOR_1B 2
-#define BUTTON_LEFT 
-#define BUTTON_RIGHT 
+#define BUTTON_LEFT 11
+#define BUTTON_RIGHT 12
 
 #define DOOR_CLOSED_ANGLE 150
 #define DOOR_OPEN_ANGLE 100

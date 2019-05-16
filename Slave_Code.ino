@@ -8,6 +8,7 @@ void setup() {
 }
 
 void loop() {
+    if (digitalRead())
     TurnCoinArm();
     TurnMagnet();
     Detect_Colour_OLED_Display() ;
