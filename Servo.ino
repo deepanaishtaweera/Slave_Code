@@ -18,8 +18,8 @@ void TurnWaterArm() {
 }
 
 void TurnCoinArm(){
-    TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 40);
-    TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_ARM_INIT_ANGLE, 40);
+    TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 20);
+    TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_ARM_INIT_ANGLE, 20);
 }
 void TurnMagnet(){
     magnetServo.write(40);

@@ -7,11 +7,11 @@ void initializeOLED ()
             ; // Don't proceed, loop forever
     }
     display.display();
-    delay(2000); // Pause for 2 seconds
+    delay(500); // Pause for 1/2 seconds
     display.clearDisplay();
     display.drawPixel(10, 10, WHITE);
     display.display();
-    delay(10000); // time before showing anything in the display
+    delay(500); // time before showing anything in the display
 }
 
 
@@ -50,20 +50,20 @@ void Detect_Colour_OLED_Display()
         Colour = "BLUE";
     }
 
-    testscrolltext();
+    OLED_Display(Colour);
 
 }
 
 
 
-void testscrolltext()
+void OLED_Display(String text)
 {
     display.clearDisplay();
 
     display.setTextSize(2); // Draw 2X-scale text
     display.setTextColor(WHITE);
     display.setCursor(2, 2);
-    display.println(Colour);  
+    display.println(text);  
     display.display(); // Show initial text
     delay(100);
 }
