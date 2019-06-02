@@ -9,8 +9,8 @@ void initializeOLED ()
     display.display();
     delay(500); // Pause for 1/2 seconds
     display.clearDisplay();
-    display.drawPixel(10, 10, WHITE);
-    display.display();
+    /*display.drawPixel(10, 10, WHITE);
+    display.display();*/
     delay(500); // time before showing anything in the display
 }
 
@@ -18,6 +18,7 @@ void initializeOLED ()
 
 void Detect_Colour_OLED_Display()
 {
+    OLED_Display("CHOSING COLOUR");
     uint16_t r, g, b, c, colorTemp, lux;
     int red = 0;
     int green = 0;
@@ -51,6 +52,7 @@ void Detect_Colour_OLED_Display()
     }
 
     OLED_Display(Colour);
+    delay(1000);
 
 }
 
