@@ -21,7 +21,7 @@ void loop()
             Disp = Option_List[Count];
             OLED_Display(Disp);
             Count = Count + 1;
-            if (Count == 4)
+            if (Count == 5)
             { //number of items in the list
                 Count = 0;
             }

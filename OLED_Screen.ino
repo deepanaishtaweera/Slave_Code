@@ -5,16 +5,22 @@ void OLED_Screen_Cycle()
     {
         TurnCoinArm();
         TurnMagnet();
-        delay(500);
+        delay(2000);
         Detect_Colour_OLED_Display();
         OpenCoinDoor();
-        delay(1000);
+        CloseCoinDoor();
+        OpenCoinDoor();
+        delay(1500);
         CloseCoinDoor();
     }
     else if (Disp == "WaterIn")
     {
+        TurnServo(waterArmServo, WATER_ARM_INIT_ANGLE, WATER_ARM_TASK_ANGLE, 40);
         TakeWaterIn();
-    }
+        delay(20000);
+        StopMotor();
+        TurnServo(waterArmServo, WATER_ARM_TASK_ANGLE, WATER_ARM_INIT_ANGLE, 40);
+        }
     else if (Disp == "WaterOut")
     {
         TakeWaterOut();
@@ -22,6 +28,12 @@ void OLED_Screen_Cycle()
     else if (Disp == "ColourDetecting")
     {
         Detect_Colour_OLED_Display();
+    }
+    else if (Disp == "OpencoinDoor")
+    {
+        OpenCoinDoor();
+        delay(1000);
+        CloseCoinDoor();
     }
     OLED_Display(Disp);
 }
