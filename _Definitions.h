@@ -4,6 +4,8 @@
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_TCS34725.h>
 #include <Servo.h>
+#include <NeoSWSerial.h>
+
 
 #define WATER_SERVO_ARM 9
 #define COIN_SERVO_ARM 6
@@ -22,7 +24,7 @@
 #define COIN_ARM_TASK_ANGLE 50
 #define WATER_ARM_INIT_ANGLE 30
 #define WATER_ARM_TASK_ANGLE 100
-#define MAGNET_INIT_ANGLE 85
+#define MAGNET_INIT_ANGLE 165
 #define MAGNET_TASK_ANGLE 5
 
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
@@ -31,3 +33,7 @@
 #define NUMFLAKES 10
 #define LOGO_HEIGHT 16
 #define LOGO_WIDTH 16
+
+#define Red 10
+#define Green A0
+#define Blue A1

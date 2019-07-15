@@ -7,5 +7,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_700MS, TCS34725_GAIN_1X);
 String Colour;
 String Disp;
-String Option_List[5] = {"CoinCollecting", "WaterIn", "WaterOut", "ColourDetecting", "OpencoinDoor"};
+String Option_List[7] = {"CoinCollecting", "WaterIn", "WaterOut", "ColourDetecting", "OpenCoinDoorTask", "CheckConnection", "OpenCoinDoor"};
 int Count = 0;
+NeoSWSerial Master(4,5);

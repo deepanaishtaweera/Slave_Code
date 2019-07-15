@@ -7,11 +7,13 @@ void OLED_Screen_Cycle()
         TurnMagnet();
         delay(2000);
         Detect_Colour_OLED_Display();
-        OpenCoinDoor();
-        CloseCoinDoor();
+        OLED_Display(Colour);
         OpenCoinDoor();
         delay(1500);
         CloseCoinDoor();
+        digitalWrite(Red, LOW);
+        digitalWrite(Green, LOW);
+        digitalWrite(Blue, LOW);
     }
     else if (Disp == "WaterIn")
     {
@@ -20,7 +22,7 @@ void OLED_Screen_Cycle()
         delay(20000);
         StopMotor();
         TurnServo(waterArmServo, WATER_ARM_TASK_ANGLE, WATER_ARM_INIT_ANGLE, 40);
-        }
+    }
     else if (Disp == "WaterOut")
     {
         TakeWaterOut();
@@ -28,12 +30,32 @@ void OLED_Screen_Cycle()
     else if (Disp == "ColourDetecting")
     {
         Detect_Colour_OLED_Display();
+        OLED_Display(Colour);
     }
-    else if (Disp == "OpencoinDoor")
+    else if (Disp == "OpenCoinDoorTask")
     {
+        TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 5);
+        magnetServo.write(20);
+        delay(500);
         OpenCoinDoor();
         delay(1000);
+        magnetServo.write(MAGNET_INIT_ANGLE);
+        TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_DROP_ANGLE, 10);
+        Master.write(73);
         CloseCoinDoor();
+    }
+    else if (Disp == "OpenCoinDoor")
+    {
+        OpenCoinDoor();
+        delay(2000);
+        CloseCoinDoor();
+    }
+    else if (Disp == "CheckConnection")
+    {
+        while (1)
+        {
+            MasterCom();
+        }
     }
     OLED_Display(Disp);
 }

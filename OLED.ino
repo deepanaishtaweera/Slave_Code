@@ -41,18 +41,20 @@ void Detect_Colour_OLED_Display()
     if (red > green && red > blue)
     {
         Colour = "RED";
+        digitalWrite(Red, HIGH);
     }
     if (green > red && green > blue)
     {
         Colour = "GREEN";
+        digitalWrite(Green, HIGH);
     }
     if (blue > green && blue > red)
     {
         Colour = "BLUE";
+        digitalWrite(Blue, HIGH);
     }
 
-    OLED_Display(Colour);
-    delay(1000);
+    //OLED_Display(Colour);
 
 }
 

@@ -18,15 +18,16 @@ void TurnWaterArm() {
 }
 
 void TurnCoinArm(){
-    TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 20);
-    TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_DROP_ANGLE, 20);
+    TurnServo(coinArmServo, COIN_ARM_INIT_ANGLE, COIN_ARM_TASK_ANGLE, 5);
+    TurnServo(coinArmServo, COIN_ARM_TASK_ANGLE, COIN_DROP_ANGLE, 10);
     
 }
 void TurnMagnet(){
     magnetServo.write(40);
-    TurnServo(coinArmServo, COIN_DROP_ANGLE, COIN_INTERMEDIATE_ANGLE, 10);
+    TurnServo(coinArmServo, COIN_DROP_ANGLE, COIN_INTERMEDIATE_ANGLE, 20);
     TurnServo(coinArmServo, COIN_INTERMEDIATE_ANGLE, COIN_ARM_INIT_ANGLE, 20);
-    magnetServo.write(95);
+    delay(500);
+    magnetServo.write(MAGNET_INIT_ANGLE);
 }
 
 void CloseCoinDoor(){

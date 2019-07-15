@@ -6,6 +6,7 @@ void setup()
     InitializeServo();
     InitializeMotor();
     initializeOLED();
+    Master.begin(9600);
 }
 
 void loop()
@@ -21,16 +22,20 @@ void loop()
             Disp = Option_List[Count];
             OLED_Display(Disp);
             Count = Count + 1;
-            if (Count == 5)
+            if (Count == 7)
             { //number of items in the list
                 Count = 0;
             }
             delay(500);
         }
-        if (digitalRead(BUTTON_RIGHT) == HIGH)
+        else if (digitalRead(BUTTON_RIGHT) == HIGH)
         {
             OLED_Screen_Cycle();
             delay(500);
+        }
+        else
+        {
+            TaskMode();
         }
     }
 }
