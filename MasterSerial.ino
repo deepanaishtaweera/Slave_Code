@@ -75,7 +75,10 @@ void TaskMode()
         else if (message == 69)
         {
             TurnServo(waterArmServo, WATER_ARM_INIT_ANGLE, WATER_ARM_TASK_ANGLE, 40);
-            TakeWaterIn(); //or TakeWaterOut
+            TakeWaterIn();
+            delay(12000);
+            StopMotor();
+            TurnServo(waterArmServo, WATER_ARM_TASK_ANGLE, WATER_ARM_INIT_ANGLE, 40);
             Master.write(74);
         }
     }
